@@ -33,7 +33,7 @@ public class vueConnexion extends JPanel {
 		setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Authentification GSB");
-		lblNewLabel.setForeground(new Color(248, 248, 255));
+		lblNewLabel.setForeground(new Color(1, 1, 1));
 		lblNewLabel.setFont(new Font("Gentium", Font.BOLD, 31));
 		lblNewLabel.setBounds(156, 76, 309, 46);
 		add(lblNewLabel);
@@ -54,13 +54,13 @@ public class vueConnexion extends JPanel {
 		
 		lblLogin = new JLabel("Login");
 		lblLogin.setFont(new Font("Gentium", Font.BOLD, 18));
-		lblLogin.setForeground(new Color(248, 248, 255));
+		lblLogin.setForeground(new Color(1, 1, 1));
 		lblLogin.setBounds(156, 165, 70, 25);
 		add(lblLogin);
 		
 		lblPassword = new JLabel("Password");
 		lblPassword.setFont(new Font("Gentium", Font.BOLD, 18));
-		lblPassword.setForeground(new Color(248, 248, 255));
+		lblPassword.setForeground(new Color(1, 1, 1));
 		lblPassword.setBounds(156, 219, 90, 15);
 		add(lblPassword);
 		connecter.setFont(new Font("Gentium", Font.BOLD, 17));

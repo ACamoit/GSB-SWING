@@ -232,6 +232,69 @@ public class modeleSQL {
 		
 	}
 
+	public List<Visiteur> selectVisiteursAlerte(){
+		Visiteur unVisiteur = null;
+		List<Visiteur> lesVisiteurs = new ArrayList<Visiteur>();
+		int nbProduits = 0;
+		
+		try{
+			Connection conn = (Connection) connexion.ouvrirConnexion("jdbc:mysql://localhost/Gsb", "root", "azerty");
+			Statement stm = conn.createStatement();
+			String sql = "Select * from VISITEUR ";
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			ResultSet resultat = null;
+			resultat = pstmt.executeQuery();
+			while(resultat.next()){
+				
+				unVisiteur = new Visiteur(resultat.getString("VIS_MATRICULE"),resultat.getString("VIS_NOM"),resultat.getString("VIS_PRENOM"),"4","5","6","7","8","9",resultat.getInt("VIS_OBJECTIF"),0);
+				nbProduits = selectResultat(unVisiteur.getMatricule(), conn);
+				unVisiteur.setNbRapports(nbProduits);
+				if(unVisiteur.getNbRapports() < unVisiteur.getObjectif()){
+					lesVisiteurs.add(unVisiteur
+							);
+				}
+				
+			}
+			
+			conn.close();
+			connexion.fermerConnexion();
+			pstmt.close();
+			stm.close();
+		}
+		catch(SQLException e){
+			System.out.println(e.getMessage());
+		}
+		return lesVisiteurs;
+	}
+	
+	public int selectResultat(String matricule, Connection conn){
+		int leresultat = 0;
+		
+		try{
+			System.out.println(conn);
+			Statement stm = conn.createStatement();
+			System.out.println("Apres la connexion");
+			String sql = "Select count(*) AS RESULTAT "
+						+"From RAPPORT_VISITE "
+						+"WHERE VIS_MATRICULE = ? ";
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, matricule);
+			System.out.println(pstmt);
+			ResultSet resultat = null;
+			resultat = pstmt.executeQuery();
+			while(resultat.next()){
+				System.out.println("Dans le next");
+				leresultat = resultat.getInt("RESULTAT");
+			}
+			
+			pstmt.close();
+			stm.close();
+		}
+		catch(SQLException e){
+			System.out.println(e.getMessage());
+		}
+		return leresultat;
+	}
 	public List<Rapport> selectRapports(String nomVis, int mois, int annee){
 		
 		if(useNetwork){

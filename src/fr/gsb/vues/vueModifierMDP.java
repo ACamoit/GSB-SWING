@@ -35,7 +35,7 @@ public class vueModifierMDP extends JPanel {
 		setLayout(null);
 		
 		JLabel lblChangementDeMot = new JLabel("Changement de mot de passe");
-		lblChangementDeMot.setForeground(Color.WHITE);
+		lblChangementDeMot.setForeground(Color.BLACK);
 		lblChangementDeMot.setBackground(Color.WHITE);
 		lblChangementDeMot.setFont(new Font("Gentium", Font.BOLD, 31));
 		lblChangementDeMot.setBounds(98, 43, 411, 46);
@@ -57,21 +57,21 @@ public class vueModifierMDP extends JPanel {
 		tfNouveauMDP2.setColumns(10);
 		
 		JLabel lblAncienMdp = new JLabel("Ancien mot de passe");
-		lblAncienMdp.setForeground(Color.WHITE);
+		lblAncienMdp.setForeground(Color.BLACK);
 		lblAncienMdp.setBackground(Color.WHITE);
 		lblAncienMdp.setFont(new Font("Gentium", Font.BOLD, 18));
 		lblAncienMdp.setBounds(68, 147, 204, 19);
 		add(lblAncienMdp);
 		
 		label_1 = new JLabel("Nouveau mot de passe");
-		label_1.setForeground(Color.WHITE);
+		label_1.setForeground(Color.BLACK);
 		label_1.setFont(new Font("Gentium", Font.BOLD, 18));
 		label_1.setBounds(68, 213, 204, 15);
 		add(label_1);
 		
 		lblNouveauMdp = new JLabel("Nouveau mot de passe");
 		lblNouveauMdp.setFont(new Font("Gentium", Font.BOLD, 18));
-		lblNouveauMdp.setForeground(Color.WHITE);
+		lblNouveauMdp.setForeground(Color.BLACK);
 		lblNouveauMdp.setBounds(68, 180, 204, 15);
 		add(lblNouveauMdp);
 		

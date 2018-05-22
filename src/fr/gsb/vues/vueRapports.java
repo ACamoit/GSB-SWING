@@ -51,7 +51,7 @@ public class vueRapports extends JPanel {
 		setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Rapports de visite");
-		lblNewLabel.setForeground(new Color(248, 248, 255));
+		lblNewLabel.setForeground(new Color(1, 1, 1));
 		lblNewLabel.setFont(new Font("Gentium", Font.BOLD, 31));
 		lblNewLabel.setBounds(193, 12, 245, 46);
 		add(lblNewLabel);

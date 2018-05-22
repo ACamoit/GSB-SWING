@@ -32,6 +32,7 @@ public class vueAccueil extends JPanel {
 	private Session session = Session.getSession();
 	private JButton btnListeDtaille = new JButton("Liste détaillée");
 	private JButton btnPractiHsi = new JButton("Practiciens Hésitants");
+	private JButton btnAlerteVisiteurs = new JButton("Alerte Visiteurs");
 	
 	public vueAccueil(final vueGSB gsb) {
 		this.gsb = gsb;
@@ -45,14 +46,14 @@ public class vueAccueil extends JPanel {
 		JLabel lblBonjourMonSeigneur = new JLabel("Bonjour " + session.getLeVisiteur().getPrenom() + " " + session.getLeVisiteur().getNom());
 		
 		
-		lblBonjourMonSeigneur.setForeground(new Color(248, 248, 255));
+		lblBonjourMonSeigneur.setForeground(new Color(1, 1, 1));
 		lblBonjourMonSeigneur.setFont(new Font("Gentium", Font.BOLD, 31));
 		lblBonjourMonSeigneur.setBounds(101, 39, 499, 51);
 		add(lblBonjourMonSeigneur);
 		
 		JLabel lblDerniersRapportsDe = new JLabel("Derniers rapports de visite");
 		lblDerniersRapportsDe.setFont(new Font("Gentium", Font.BOLD, 18));
-		lblDerniersRapportsDe.setForeground(new Color(245, 255, 250));
+		lblDerniersRapportsDe.setForeground(new Color(1, 1, 1));
 		lblDerniersRapportsDe.setBounds(22, 140, 240, 25);
 		add(lblDerniersRapportsDe);
 		
@@ -117,6 +118,11 @@ public class vueAccueil extends JPanel {
 		
 		controleur = new controleurAccueil(this);
 		
+		
+		btnAlerteVisiteurs.setFont(new Font("Gentium", Font.BOLD, 17));
+		btnAlerteVisiteurs.setBounds(337, 126, 228, 25);
+		add(btnAlerteVisiteurs);
+		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon("/home/developpeur/workspace/AppliRV/src/fr/gsb/img/8315_l.jpg"));
 		label.setBounds(0, 0, 600, 400);
@@ -132,7 +138,9 @@ public class vueAccueil extends JPanel {
 		return this.deconnecter;
 	}
 	
-	
+	public JButton getbAlerteVisiteurs(){
+		return this.btnAlerteVisiteurs;
+	}
 	
 	public JButton getbRapportListe(){
 		return this.btnListeDtaille;

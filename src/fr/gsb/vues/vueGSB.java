@@ -35,6 +35,7 @@ public class vueGSB extends JFrame {
 	private vueAccueil pageAccueil;
 	private vueRapports pageRapports;
 	private vueModifierMDP pageModifierMDP;
+	private vueAlerteVisiteur pageVisiteurs;
 	public vueModifierMDP getPageModifierMDP() {
 		return pageModifierMDP;
 	}
@@ -161,6 +162,14 @@ public class vueGSB extends JFrame {
 		this.pageRapports = page;
 	}
 	
+	
+	public vueAlerteVisiteur getPageVisiteurs(){
+		return this.pageVisiteurs;
+	}
+	
+	public void setPageVisiteur(vueAlerteVisiteur page){
+		this.pageVisiteurs = page;
+	}
 
 	public vueConnexion getPageConnexion() {
 		return pageConnexion;

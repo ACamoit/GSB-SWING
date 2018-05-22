@@ -40,6 +40,7 @@ public class controleurAccueil implements ActionListener {
 		this.vue.getbDeconnecter().addActionListener( this );
 		this.vue.getbRapportListe().addActionListener( this );
 		this.vue.getbPratiHesitant().addActionListener( this );
+		this.vue.getbAlerteVisiteurs().addActionListener( this );
 	}
 
 	
@@ -55,6 +56,9 @@ public class controleurAccueil implements ActionListener {
 		if( sourceEvenement == this.vue.getbRapportListe() ){
 			gsb.changerVue("vueRapports");
 			
+		}
+		if( sourceEvenement == this.vue.getbAlerteVisiteurs() ){
+			gsb.changerVue("vueVisiteurs");
 		}
 		
 	} 

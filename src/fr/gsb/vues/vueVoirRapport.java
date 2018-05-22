@@ -77,13 +77,13 @@ public class vueVoirRapport extends JFrame {
 		
 		JLabel lblN = new JLabel("N°");
 		lblN.setFont(new Font("Gentium", Font.BOLD, 18));
-		lblN.setForeground(Color.WHITE);
+		lblN.setForeground(Color.BLACK);
 		lblN.setBounds(22, 14, 70, 15);
 		contentPane.add(lblN);
 		
 		JLabel lblVisiteur = new JLabel("Visiteur");
 		lblVisiteur.setFont(new Font("Gentium", Font.BOLD, 18));
-		lblVisiteur.setForeground(Color.WHITE);
+		lblVisiteur.setForeground(Color.BLACK);
 		lblVisiteur.setBounds(219, 14, 70, 15);
 		contentPane.add(lblVisiteur);
 		
@@ -109,12 +109,12 @@ public class vueVoirRapport extends JFrame {
 		
 		JLabel lblPraticien = new JLabel("Praticien");
 		lblPraticien.setFont(new Font("Gentium", Font.BOLD, 18));
-		lblPraticien.setForeground(Color.WHITE);
+		lblPraticien.setForeground(Color.BLACK);
 		lblPraticien.setBounds(219, 45, 82, 15);
 		contentPane.add(lblPraticien);
 		
 		JLabel lblDate = new JLabel("Date");
-		lblDate.setForeground(Color.WHITE);
+		lblDate.setForeground(Color.BLACK);
 		lblDate.setFont(new Font("Gentium", Font.BOLD, 18));
 		lblDate.setBounds(22, 45, 70, 15);
 		contentPane.add(lblDate);
@@ -131,7 +131,7 @@ public class vueVoirRapport extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("Motif");
 		lblNewLabel.setFont(new Font("Gentium", Font.BOLD, 18));
-		lblNewLabel.setForeground(Color.WHITE);
+		lblNewLabel.setForeground(Color.BLACK);
 		lblNewLabel.setBounds(22, 89, 70, 15);
 		contentPane.add(lblNewLabel);
 		
@@ -147,7 +147,7 @@ public class vueVoirRapport extends JFrame {
 		
 		JLabel lblBilan = new JLabel("Bilan");
 		lblBilan.setFont(new Font("Gentium", Font.BOLD, 18));
-		lblBilan.setForeground(Color.WHITE);
+		lblBilan.setForeground(Color.BLACK);
 		lblBilan.setBounds(22, 118, 70, 15);
 		contentPane.add(lblBilan);
 		
@@ -173,7 +173,7 @@ public class vueVoirRapport extends JFrame {
 		
 		JLabel lblEvaluation = new JLabel("Evaluation");
 		lblEvaluation.setFont(new Font("Gentium", Font.BOLD, 18));
-		lblEvaluation.setForeground(Color.WHITE);
+		lblEvaluation.setForeground(Color.BLACK);
 		lblEvaluation.setBounds(153, 192, 95, 15);
 		contentPane.add(lblEvaluation);
 		

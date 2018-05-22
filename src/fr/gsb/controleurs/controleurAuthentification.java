@@ -14,6 +14,7 @@ import fr.gsb.vues.vueGSB;
 import fr.gsb.vues.vueModifierMDP;
 import fr.gsb.vues.vueRapports;
 import fr.gsb.vues.vueAccueil;
+import fr.gsb.vues.vueAlerteVisiteur;
 
 public class controleurAuthentification implements ActionListener {
 	
@@ -62,6 +63,8 @@ public class controleurAuthentification implements ActionListener {
 				gsb.getConteneur().add(gsb.getPageAccueil(),"vueAccueil");
 				gsb.setPageModifierMDP(new vueModifierMDP(gsb));
 				gsb.getConteneur().add(gsb.getPageModifierMDP(),"vueModifierMDP");
+				gsb.setPageVisiteur(new vueAlerteVisiteur(gsb));
+				gsb.getConteneur().add(gsb.getPageVisiteurs(),"vueVisiteurs");
 				this.gsb.setBarreMenusModeConnecte();
 				this.gsb.changerVue("vueAccueil");
 				

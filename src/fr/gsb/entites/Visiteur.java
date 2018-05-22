@@ -19,9 +19,25 @@ public class Visiteur {
 	private String secCode = null;
 	private String labCode = null;
 	private static ArrayList<Visiteur> lesVisiteurs;
+	private int objectif = 0;
+	private int nbRapports = 0;
 	
 	public Visiteur(){
 		this.peuplerVisiteur();
+	}
+	
+	public Visiteur(String mat, String nom, String pre, String adr, String cp, String vil, String dat, String mdp, String lab, int objectif, int nbRapports){
+		this.matricule = mat;
+		this.nom = nom;
+		this.prenom = pre;
+		this.adresse = adr;
+		this.cp = cp;
+		this.ville = vil;
+		this.dateembauche = dat;
+		this.mdp = mdp;
+		this.labCode = lab;
+		this.objectif = objectif;
+		this.nbRapports = nbRapports;
 	}
 	
 	public Visiteur(String mat, String nom, String pre, String adr, String cp, String vil, String dat, String mdp, String lab){
@@ -152,6 +168,23 @@ public class Visiteur {
 	}
 
 	
+	
+
+	public int getObjectif() {
+		return objectif;
+	}
+
+	public void setObjectif(int objectif) {
+		this.objectif = objectif;
+	}
+
+	public int getNbRapports() {
+		return nbRapports;
+	}
+
+	public void setNbRapports(int nbRapports) {
+		this.nbRapports = nbRapports;
+	}
 
 	@Override
 	public String toString() {
